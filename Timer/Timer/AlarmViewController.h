@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface AlarmViewController : UIViewController
+@interface AlarmViewController : UIViewController<UIPickerViewDelegate>
+
 
 @end

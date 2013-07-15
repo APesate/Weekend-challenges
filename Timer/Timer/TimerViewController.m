@@ -8,6 +8,8 @@
 
 #import "TimerViewController.h"
 #import "StopwatchViewController.h"
+#import "AlarmViewController.h"
+#import "WorldClockViewController.h"
 
 @interface TimerViewController (){
     
@@ -15,18 +17,22 @@
     __weak IBOutlet UILabel *secondsLabel;
     __weak IBOutlet UILabel *minutesLabel;
     __weak IBOutlet UILabel *hoursLabel;
+    __weak IBOutlet UILabel *colonHMLabel;
+    __weak IBOutlet UILabel *colonMSLabel;
+    
     
     UIButton*   myStartButton;
     UIButton*   myStopButton;
     UIButton*   myResetButton;
     UIButton*   myContinueButton;
     NSTimer*    timer;
+    NSTimer*    colonTimer;
  
     StopwatchViewController*    stopwatchViewController;
+    AlarmViewController*        alarmViewController;
+    WorldClockViewController*   worldClockViewController;
     SystemSoundID*  soundPlayer;
 }
-- (IBAction)goBack:(id)sender;
-- (IBAction)goToStopwatch:(id)sender;
 
 @end
 
@@ -45,11 +51,18 @@
 {
     [super viewDidLoad];
     
+     colonTimer = [NSTimer scheduledTimerWithTimeInterval:0.7f target:self selector:@selector(colonIntermitent) userInfo:nil repeats:YES];
+    
+    [secondsLabel setFont:[UIFont fontWithName:@"Symbol" size:50]];
+    [minutesLabel setFont:[UIFont fontWithName:@"Symbol" size:50]];
+    [hoursLabel setFont:[UIFont fontWithName:@"Symbol" size:50]];
+    
     //Create Continue Button
     myContinueButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [myContinueButton setFrame:CGRectMake(20, 333, 132, 43)];
     [myContinueButton setTitle:@"Continue" forState:UIControlStateNormal];
     [myContinueButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[myContinueButton titleLabel] setFont:[UIFont fontWithName:@"AmericanTypewriter-Bold" size:20]];
     [myContinueButton setBackgroundColor: [UIColor colorWithRed:0 green:0.8 blue:0 alpha:1.0]];
     [myContinueButton.layer setCornerRadius:8];
     [myContinueButton setTag:1];
@@ -62,6 +75,7 @@
     [myStopButton setFrame:CGRectMake(20, 233, 132, 43)];
     [myStopButton setTitle:@"Stop" forState:UIControlStateNormal];
     [myStopButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[myStopButton titleLabel] setFont:[UIFont fontWithName:@"AmericanTypewriter-Bold" size:20]];
     [myStopButton setBackgroundColor: [UIColor redColor]];
     [myStopButton.layer setCornerRadius:8];
     [myStopButton setTag:2];
@@ -73,6 +87,7 @@
     myResetButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [myResetButton setFrame:CGRectMake(155, 233, 132, 43)];
     [myResetButton setTitle:@"Reset" forState:UIControlStateNormal];
+    [[myResetButton titleLabel] setFont:[UIFont fontWithName:@"Courier" size:20]];
     [myResetButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [myResetButton setBackgroundColor: [UIColor lightGrayColor]];
     [myResetButton.layer setCornerRadius:8];
@@ -86,6 +101,7 @@
     [myStartButton setFrame:CGRectMake(20, 233, 267, 43)];
     [myStartButton setTitle:@"Start" forState:UIControlStateNormal];
     [myStartButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[myStartButton titleLabel] setFont:[UIFont fontWithName:@"AmericanTypewriter-Bold" size:20]];
     [myStartButton setBackgroundColor: [UIColor colorWithRed:0 green:0.8 blue:0 alpha:1.0]];
     [myStartButton.layer setCornerRadius:8];
     [myStartButton setTag:4];
@@ -103,6 +119,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)colonIntermitent{
+    [colonHMLabel setEnabled:!(colonHMLabel.enabled)];
+    [colonMSLabel setEnabled:!(colonMSLabel.enabled)];
+}
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) {
@@ -305,17 +325,42 @@
     }
 }
 
-- (IBAction)goBack:(id)sender {
-    [self.view removeFromSuperview];
+- (IBAction)changeView:(UIButton *)sender {
+    switch (sender.tag) {
+        case 5:
+            [self.view removeFromSuperview];
+            break;
+        case 6:
+            [self.view removeFromSuperview];
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.5];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+            stopwatchViewController = [[StopwatchViewController alloc] initWithNibName:nil bundle:nil];
+            [self.view addSubview:stopwatchViewController.view];
+            [UIView commitAnimations];
+            break;
+        case 7:
+            [self.view removeFromSuperview];
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.5];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+            alarmViewController = [[AlarmViewController alloc] initWithNibName:nil bundle:nil];
+            [self.view addSubview:alarmViewController.view];
+            [UIView commitAnimations];
+            break;
+        case 8:
+            [self.view removeFromSuperview];
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.5];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+            worldClockViewController = [[WorldClockViewController alloc] initWithNibName:nil bundle:nil];
+            [self.view addSubview:worldClockViewController.view];
+            [UIView commitAnimations];
+            break;
+            
+        default:
+            break;
+    }
 }
 
-- (IBAction)goToStopwatch:(id)sender {
-    [self.view removeFromSuperview];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
-    stopwatchViewController = [[StopwatchViewController alloc] initWithNibName:nil bundle:nil];
-    [self.view addSubview:stopwatchViewController.view];
-    [UIView commitAnimations];
-}
 @end

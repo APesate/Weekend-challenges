@@ -30,6 +30,9 @@
 		821B1BDF1792254300563CF4 /* Fire Alarm-SoundBible.com-78848779.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 821B1BDD1792254300563CF4 /* Fire Alarm-SoundBible.com-78848779.mp3 */; };
 		821B1BE01792254300563CF4 /* Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 821B1BDE1792254300563CF4 /* Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3 */; };
 		821B1BE217922A9000563CF4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821B1BE117922A9000563CF4 /* AudioToolbox.framework */; };
+		821B1BE6179342FB00563CF4 /* WorldClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821B1BE4179342FB00563CF4 /* WorldClockViewController.m */; };
+		821B1BE7179342FB00563CF4 /* WorldClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 821B1BE5179342FB00563CF4 /* WorldClockViewController.xib */; };
+		829763831793B6B20061C5E0 /* Planks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 829763821793B6A70061C5E0 /* Planks.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,11 @@
 		821B1BDD1792254300563CF4 /* Fire Alarm-SoundBible.com-78848779.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Fire Alarm-SoundBible.com-78848779.mp3"; sourceTree = "<group>"; };
 		821B1BDE1792254300563CF4 /* Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3"; sourceTree = "<group>"; };
 		821B1BE117922A9000563CF4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		821B1BE3179342FB00563CF4 /* WorldClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldClockViewController.h; sourceTree = "<group>"; };
+		821B1BE4179342FB00563CF4 /* WorldClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldClockViewController.m; sourceTree = "<group>"; };
+		821B1BE5179342FB00563CF4 /* WorldClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorldClockViewController.xib; sourceTree = "<group>"; };
+		8297637F1793B38E0061C5E0 /* BluprintDEMO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BluprintDEMO.otf; sourceTree = "<group>"; };
+		829763821793B6A70061C5E0 /* Planks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Planks.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +136,12 @@
 				821B1BD51792196600563CF4 /* AlarmViewController.h */,
 				821B1BD61792196600563CF4 /* AlarmViewController.m */,
 				821B1BD71792196600563CF4 /* AlarmViewController.xib */,
+				821B1BE3179342FB00563CF4 /* WorldClockViewController.h */,
+				821B1BE4179342FB00563CF4 /* WorldClockViewController.m */,
+				821B1BE5179342FB00563CF4 /* WorldClockViewController.xib */,
 				821B1BDC1792253900563CF4 /* Sounds */,
 				821B1BB1178F9EF400563CF4 /* Images */,
+				829763801793B3940061C5E0 /* Font */,
 				821B1B88178F97B700563CF4 /* Supporting Files */,
 			);
 			path = Timer;
@@ -165,6 +177,15 @@
 				821B1BDE1792254300563CF4 /* Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3 */,
 			);
 			name = Sounds;
+			sourceTree = "<group>";
+		};
+		829763801793B3940061C5E0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				829763821793B6A70061C5E0 /* Planks.ttf */,
+				8297637F1793B38E0061C5E0 /* BluprintDEMO.otf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829763831793B6B20061C5E0 /* Planks.ttf in Resources */,
 				821B1B8C178F97B700563CF4 /* InfoPlist.strings in Resources */,
 				821B1B94178F97B700563CF4 /* Default.png in Resources */,
 				821B1B96178F97B700563CF4 /* Default@2x.png in Resources */,
@@ -230,6 +252,7 @@
 				821B1BD91792196600563CF4 /* AlarmViewController.xib in Resources */,
 				821B1BDF1792254300563CF4 /* Fire Alarm-SoundBible.com-78848779.mp3 in Resources */,
 				821B1BE01792254300563CF4 /* Loud_Alarm_Clock_Buzzer-Muk1984-493547174.mp3 in Resources */,
+				821B1BE7179342FB00563CF4 /* WorldClockViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +269,7 @@
 				821B1BAF178F9B7D00563CF4 /* StopwatchViewController.m in Sources */,
 				821B1BD31791C09E00563CF4 /* TimerViewController.m in Sources */,
 				821B1BD81792196600563CF4 /* AlarmViewController.m in Sources */,
+				821B1BE6179342FB00563CF4 /* WorldClockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
