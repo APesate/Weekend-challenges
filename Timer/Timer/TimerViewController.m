@@ -31,7 +31,7 @@
     StopwatchViewController*    stopwatchViewController;
     AlarmViewController*        alarmViewController;
     WorldClockViewController*   worldClockViewController;
-    SystemSoundID*  soundPlayer;
+    AVAudioPlayer*  audioPlayer;
 }
 
 @end
@@ -194,16 +194,19 @@
         [numberPicker setBounds:CGRectMake(numberPicker.bounds.origin.x, numberPicker.bounds.origin.y + 300, numberPicker.frame.size.width, numberPicker.frame.size.height)];
         [myStartButton setCenter:CGPointMake(myStartButton.center.x, myStartButton.center.y - 100)];
         
-        
-       /* NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"Sound Path" ofType:@"mp3"];
-        CFURLRef soundURL = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
-        AudioServicesCreateSystemSoundID(soundURL, soundPlayer);
-        
-        AudioServicesPlaySystemSound(*(soundPlayer));*/
+        [self playAlarmSound];
 
         return YES;
     }
     return NO;
+}
+
+-(void)playAlarmSound{
+    NSURL* url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Fire Alarm-SoundBible.com-78848779.mp3", [[NSBundle mainBundle] resourcePath]]];
+    NSError* error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    audioPlayer.numberOfLoops = 0;
+    [audioPlayer play];
 }
 
 -(void) timerCountDown{
