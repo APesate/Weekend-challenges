@@ -18,6 +18,7 @@
     TimerViewController*        timerViewController;
     AlarmViewController*        alarmViewController;
     WorldClockViewController*   worldClockViewController;
+    __weak IBOutlet UIImageView *myView;
     
 }
 - (IBAction)changeView:(UIButton *)sender;
