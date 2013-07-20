@@ -49,14 +49,14 @@
 
 /* Begin PBXFileReference section */
 		8218D7D617999CCA00CAC79F /* Question Mark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Question Mark.jpg"; path = "Images/Question Mark.jpg"; sourceTree = "<group>"; };
-		82C87BA6179858D900EF3255 /* TouchViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C87BA6179858D900EF3255 /* TouchViewsManually.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchViewsManually.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C87BA9179858D900EF3255 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		82C87BAB179858D900EF3255 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82C87BAD179858D900EF3255 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		82C87BB1179858D900EF3255 /* TouchViews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchViews-Info.plist"; sourceTree = "<group>"; };
+		82C87BB1179858D900EF3255 /* TouchViewsManually-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TouchViewsManually-Info.plist"; sourceTree = "<group>"; };
 		82C87BB3179858D900EF3255 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82C87BB5179858D900EF3255 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		82C87BB7179858D900EF3255 /* TouchViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchViews-Prefix.pch"; sourceTree = "<group>"; };
+		82C87BB7179858D900EF3255 /* TouchViewsManually-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TouchViewsManually-Prefix.pch"; sourceTree = "<group>"; };
 		82C87BB8179858D900EF3255 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82C87BB9179858D900EF3255 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82C87BBB179858D900EF3255 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		82C87BA7179858D900EF3255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82C87BA6179858D900EF3255 /* TouchViews.app */,
+				82C87BA6179858D900EF3255 /* TouchViewsManually.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,10 +157,10 @@
 		82C87BB0179858D900EF3255 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				82C87BB1179858D900EF3255 /* TouchViews-Info.plist */,
+				82C87BB1179858D900EF3255 /* TouchViewsManually-Info.plist */,
 				82C87BB2179858D900EF3255 /* InfoPlist.strings */,
 				82C87BB5179858D900EF3255 /* main.m */,
-				82C87BB7179858D900EF3255 /* TouchViews-Prefix.pch */,
+				82C87BB7179858D900EF3255 /* TouchViewsManually-Prefix.pch */,
 				82C87BBB179858D900EF3255 /* Default.png */,
 				82C87BBD179858D900EF3255 /* Default@2x.png */,
 				82C87BBF179858D900EF3255 /* Default-568h@2x.png */,
@@ -235,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		82C87BA5179858D900EF3255 /* TouchViews */ = {
+		82C87BA5179858D900EF3255 /* TouchViewsManually */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82C87BC9179858D900EF3255 /* Build configuration list for PBXNativeTarget "TouchViews" */;
+			buildConfigurationList = 82C87BC9179858D900EF3255 /* Build configuration list for PBXNativeTarget "TouchViewsManually" */;
 			buildPhases = (
 				82C87BA2179858D900EF3255 /* Sources */,
 				82C87BA3179858D900EF3255 /* Frameworks */,
@@ -247,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = TouchViews;
+			name = TouchViewsManually;
 			productName = TouchViews;
-			productReference = 82C87BA6179858D900EF3255 /* TouchViews.app */;
+			productReference = 82C87BA6179858D900EF3255 /* TouchViewsManually.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Andrés Pesate";
 			};
-			buildConfigurationList = 82C87BA1179858D900EF3255 /* Build configuration list for PBXProject "TouchViews" */;
+			buildConfigurationList = 82C87BA1179858D900EF3255 /* Build configuration list for PBXProject "TouchViewsManually" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,7 +273,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82C87BA5179858D900EF3255 /* TouchViews */,
+				82C87BA5179858D900EF3255 /* TouchViewsManually */,
 			);
 		};
 /* End PBXProject section */
@@ -413,9 +413,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TouchViews/TouchViews-Prefix.pch";
-				INFOPLIST_FILE = "TouchViews/TouchViews-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "TouchViews/TouchViewsManually-Prefix.pch";
+				INFOPLIST_FILE = "TouchViews/TouchViewsManually-Info.plist";
+				PRODUCT_NAME = TouchViewsManually;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,9 +424,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TouchViews/TouchViews-Prefix.pch";
-				INFOPLIST_FILE = "TouchViews/TouchViews-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "TouchViews/TouchViewsManually-Prefix.pch";
+				INFOPLIST_FILE = "TouchViews/TouchViewsManually-Info.plist";
+				PRODUCT_NAME = TouchViewsManually;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -434,7 +434,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		82C87BA1179858D900EF3255 /* Build configuration list for PBXProject "TouchViews" */ = {
+		82C87BA1179858D900EF3255 /* Build configuration list for PBXProject "TouchViewsManually" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82C87BC7179858D900EF3255 /* Debug */,
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82C87BC9179858D900EF3255 /* Build configuration list for PBXNativeTarget "TouchViews" */ = {
+		82C87BC9179858D900EF3255 /* Build configuration list for PBXNativeTarget "TouchViewsManually" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82C87BCA179858D900EF3255 /* Debug */,

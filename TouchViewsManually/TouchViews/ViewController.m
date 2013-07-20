@@ -19,8 +19,8 @@
     UIView*     missMatch;
     PauseViewController* pauseViewController;
     MyView*     firstSelection;
-    NSMutableArray* cardsArray;
-    NSArray*        imagesArray;
+    NSMutableArray* cardsArray; //Array that contains all of MyViews
+    NSArray*        imagesArray; //Array that contains all of the images availables
     NSTimer*        timer;
     BOOL    firstTurn;
     BOOL    timerRun;
@@ -42,7 +42,7 @@ typedef void(^animationBlock)(BOOL);
     [super viewDidLoad];
     
     [self initObjects];
-    [self setViewsDelegates];
+    [self createViews];
     [self makePairs];
 }
 
@@ -113,11 +113,19 @@ typedef void(^animationBlock)(BOOL);
     return image;
 }
 
--(void) setViewsDelegates{
-    for (UIView* subview in self.view.subviews){
-        if([subview isKindOfClass:[MyView class]]){
-            ((MyView*)subview).delegate = self;
-            [cardsArray addObject:subview];
+-(void) createViews{
+    int x = 0, y = 0;
+    
+    for (int i = 0; i< 16; i++) {
+        [cardsArray addObject:[[MyView alloc] initWithFrame:CGRectMake(10 + x, 80 + y, 69, 70)]];
+        [((MyView *)[cardsArray objectAtIndex:i]) setDelegate:self];
+        [self.view addSubview:[cardsArray objectAtIndex:i]];
+        
+        if(x >= 228){
+            x = 0;
+            y += 84;
+        }else{
+            x += 76;
         }
     }
 }
@@ -137,6 +145,7 @@ typedef void(^animationBlock)(BOOL);
     NSMutableArray* selectedImages = [NSMutableArray arrayWithCapacity:8];
     
     for(int i = 1; i <= 8; i++){
+        //Make the selection of two random cards in the cardsArray
         do{
             j = arc4random()%16;
         }while (((MyView *)[cardsArray objectAtIndex:j]).tag != 0);
@@ -146,7 +155,7 @@ typedef void(^animationBlock)(BOOL);
         }while (((MyView *)[cardsArray objectAtIndex:x]).tag != 0 || j==x);
         NSLog(@"Pair %i: %i - %i", i, j, x);
     
-        
+        //Make the selection of a random image in the imagesArray
         do {
             imageNumber = [NSNumber numberWithInt:arc4random()%19];
             
