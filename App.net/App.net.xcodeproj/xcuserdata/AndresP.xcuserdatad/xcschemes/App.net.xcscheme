@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82C87BA5179858D900EF3255"
-               BuildableName = "TouchViewsManually.app"
-               BlueprintName = "TouchViewsManually"
-               ReferencedContainer = "container:TouchViewsManually.xcodeproj">
+               BlueprintIdentifier = "82190DE717A2D1E900548B5B"
+               BuildableName = "App.net.app"
+               BlueprintName = "App.net"
+               ReferencedContainer = "container:App.net.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82C87BA5179858D900EF3255"
-            BuildableName = "TouchViewsManually.app"
-            BlueprintName = "TouchViewsManually"
-            ReferencedContainer = "container:TouchViewsManually.xcodeproj">
+            BlueprintIdentifier = "82190DE717A2D1E900548B5B"
+            BuildableName = "App.net.app"
+            BlueprintName = "App.net"
+            ReferencedContainer = "container:App.net.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82C87BA5179858D900EF3255"
-            BuildableName = "TouchViewsManually.app"
-            BlueprintName = "TouchViewsManually"
-            ReferencedContainer = "container:TouchViewsManually.xcodeproj">
+            BlueprintIdentifier = "82190DE717A2D1E900548B5B"
+            BuildableName = "App.net.app"
+            BlueprintName = "App.net"
+            ReferencedContainer = "container:App.net.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "82C87BA5179858D900EF3255"
-            BuildableName = "TouchViewsManually.app"
-            BlueprintName = "TouchViewsManually"
-            ReferencedContainer = "container:TouchViewsManually.xcodeproj">
+            BlueprintIdentifier = "82190DE717A2D1E900548B5B"
+            BuildableName = "App.net.app"
+            BlueprintName = "App.net"
+            ReferencedContainer = "container:App.net.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

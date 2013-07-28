@@ -228,6 +228,7 @@ typedef void(^animationBlock)(BOOL);
                     missesLabel.text = [NSString stringWithFormat:@"%i", [missesLabel.text integerValue] + 1];
                     [self performSelector:@selector(changeStatus:) withObject:senderView afterDelay:1.0f];
                     score -= 100;
+                    
                     [UIView animateWithDuration:1.0 animations:^{
                         [self.view addSubview:missMatch];
                         [missMatch setAlpha:1.0];
@@ -238,7 +239,9 @@ typedef void(^animationBlock)(BOOL);
                             [missMatch removeFromSuperview];
                         }];
                     }];
+                    
                 }else{
+                    
                     [UIView animateWithDuration:1.0 animations:^{
                         [self.view addSubview:goodGuess];
                         [goodGuess setAlpha:1.0];
@@ -249,6 +252,7 @@ typedef void(^animationBlock)(BOOL);
                             [goodGuess removeFromSuperview];
                         }];
                     }];
+                    
                     pairsLeftLabel.text = [NSString stringWithFormat:@"%i", [pairsLeftLabel.text integerValue] - 1];
                     senderView.isFaceDown = NO;
                     firstSelection.isFaceDown = NO;
