@@ -130,7 +130,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row <= [postTextsArray count] - 1){
-        return [(NSString *)[postTextsArray objectAtIndex:indexPath.row] sizeWithFont:[UIFont fontWithName:@"Courier" size:14] constrainedToSize:CGSizeMake(260.0f, 70.0f) lineBreakMode:NSLineBreakByCharWrapping].height + 40;
+        NSString *tweetString = [postTextsArray objectAtIndex:[indexPath row]];
+        return [tweetString sizeWithFont:[UIFont fontWithName:@"Courier" size:14]
+                                constrainedToSize:CGSizeMake(260.0f, 70.0f)
+                                lineBreakMode:NSLineBreakByCharWrapping].height + 40;
     }else{
         return 70;
     }
